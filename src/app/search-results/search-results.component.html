@@ -1,3 +1,18 @@
-<p>
-  search-results works!
-</p>
+<div *ngIf="result" id="resWrapper"
+ class="col-xs-12 col-sm-6 col-md-3" >
+  <div class="thumbnail" 
+  id="imgWrapper">
+    <img src={{result.thumbnailUrl}}>
+    <div class="caption">
+      <h4>{{result.title |shortenText:17}}</h4>
+      <p>{{result.description |shortenText:45}}</p>   
+    </div>
+    <p><a href="{{result.videoUrl}}"
+    target="_blank"
+    class="btn btn-default"
+    role="button"
+    id="watchBtn">
+      Watch
+    </a></p>
+  </div>
+</div>

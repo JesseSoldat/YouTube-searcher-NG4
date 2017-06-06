@@ -16,7 +16,6 @@ export class YoutubeSearchService {
   }
 
   search(query: string): Observable<SearchResult[]> {
-
     const params: string = [
       `q=${query}`,
       `key=${this.apiKey}`,
@@ -26,12 +25,10 @@ export class YoutubeSearchService {
     ].join('&');
     
     const queryUrl = `${this.apiUrl}?${params}`;
-    console.log(queryUrl);
-    
+       
     return this.http.get(queryUrl)
       .map((response: Response) => {
         return (<any>response.json()).items.map((item) => {
-          console.log(item);
           return new SearchResult({
             id: item.id.videoId,
             title: item.snippet.title,

@@ -9,13 +9,15 @@ import { SearchBoxComponent } from './search-box/search-box.component';
 
 import { youTubeSearchInjectables } from './services/youtube-search.injectables';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { ShortenTextPipe } from './shorten-text.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     YoutubeSearchComponent,
     SearchBoxComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    ShortenTextPipe
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+#resWrapper {
+  position: relative
+}
+#imgWrapper {
+  min-height: 380px;
+  border-radius: 2%;
+  box-shadow: 10px 10px 15px black;
+  
+}
+
+#watchBtn {
+  position: absolute;
+  bottom: 7%;
+  right: 7%
+}

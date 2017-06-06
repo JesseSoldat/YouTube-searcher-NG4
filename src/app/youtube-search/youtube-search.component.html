@@ -1,21 +1,24 @@
-<div class="container">
+<div class="container-fluid">
   <div class="page-header">
-    <h2>YouTube Search</h2>
-    <app-search-box
-    (loading)="loading = $event"
-    (results)="updateResults($event)">
-    </app-search-box>
+    <h2>YouTube Search</h2>  
   </div>
 
   <div class="row">
     <div class="input-group input-group-lg col-md-12">
-
+      <app-search-box
+      (loading)="loading = $event"
+      (results)="updateResults($event)">
+      </app-search-box>
     </div>
   </div>
 
   <div class="row">
-    <app-search-results>
-
-    </app-search-results>
+    <div class="col-xs-12">
+      <app-search-results
+      *ngFor="let result of results"
+      [result]="result">
+      </app-search-results>
+    </div>
+  
   </div>
 </div>

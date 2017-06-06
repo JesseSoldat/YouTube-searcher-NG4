@@ -16,7 +16,6 @@ export class YoutubeSearchComponent implements OnInit {
 
   updateResults(results: SearchResult[]): void {
     this.results = results;
-    console.log(this.results);
     
   }
 
