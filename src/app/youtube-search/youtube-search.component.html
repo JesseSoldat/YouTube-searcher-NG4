@@ -1,3 +1,21 @@
-<p>
-  youtube-search works!
-</p>
+<div class="container">
+  <div class="page-header">
+    <h2>YouTube Search</h2>
+    <app-search-box
+    (loading)="loading = $event"
+    (results)="updateResults($event)">
+    </app-search-box>
+  </div>
+
+  <div class="row">
+    <div class="input-group input-group-lg col-md-12">
+
+    </div>
+  </div>
+
+  <div class="row">
+    <app-search-results>
+
+    </app-search-results>
+  </div>
+</div>
